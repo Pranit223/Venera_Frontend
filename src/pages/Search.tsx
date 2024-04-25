@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { useDispatch } from "react-redux";
 import ProductCard from "../components/ProductCard";
+import SkeletonLoader from "../components/SkeletonLoader";
 import {
   useCategoriesQuery,
   useSearchedproductsQuery,
 } from "../redux/api/ProductApi";
-import toast from "react-hot-toast";
-import { CartItemType, CustomError } from "../types/Types";
-import { server } from "../redux/store";
-import SkeletonLoader from "../components/SkeletonLoader";
 import { addToCart } from "../redux/reducer/CartReducer";
-import { useDispatch } from "react-redux";
+import { server } from "../redux/store";
+import { CartItemType, CustomError } from "../types/Types";
 
 const Search = () => {
   const {

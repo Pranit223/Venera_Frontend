@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { CartItemType, ShippingInfoType, UserType } from "../../types/Types";
 import { CartReducerInitialState } from "../../types/ReducerTypes";
+import { CartItemType, ShippingInfoType } from "../../types/Types";
 
 const initialState: CartReducerInitialState = {
   loading: false,

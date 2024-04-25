@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-import { server } from "../store";
 import {
   CategoriesResType,
   DeleteProductReqType,
@@ -11,11 +10,8 @@ import {
   SearchProductReqType,
   SearchProductResType,
   UpdateProductReqType,
-  UpdateProductRes,
-  UserResponse,
-  UserType,
+  UpdateProductRes
 } from "../../types/Types";
-import axios from "axios";
 
 export const ProductApi = createApi({
   reducerPath: "ProductApi",
