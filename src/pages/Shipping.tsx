@@ -109,7 +109,7 @@ dispatch(saveShippingInfo(shippingInfo));
           required
           type="number"
           placeholder="Pin Code"
-          name="PinCode"
+          name="pinCode"
           value={shippingInfo.pinCode}
           onChange={changeHandler}
         />
