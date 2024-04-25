@@ -18,7 +18,6 @@ const ProductCard = ({
   stock,
   handler,
 }: ProductsProps) => {
-  const server = "ihdi";
   return (
     <div className="product-card">
       <img src={photo} alt={name} />

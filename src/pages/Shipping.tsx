@@ -1,12 +1,12 @@
+import axios from "axios";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { IoChevronBackCircleSharp } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
-import { Navigate, useNavigate } from "react-router-dom";
-import { CartReducerInitialState } from "../types/ReducerTypes";
-import axios from "axios";
-import { server } from "../redux/store";
-import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 import { saveShippingInfo } from "../redux/reducer/CartReducer";
+import { server } from "../redux/store";
+import { CartReducerInitialState } from "../types/ReducerTypes";
 import { ShippingInfoType } from "../types/Types";
 
 const Shipping = () => {

@@ -1,15 +1,14 @@
 import { ReactElement, useEffect, useState } from "react";
-import { FaTrash, FaUserAlt } from "react-icons/fa";
+import toast from "react-hot-toast";
+import { FaTrash } from "react-icons/fa";
+import { useSelector } from "react-redux";
 import { Column } from "react-table";
 import AdminSidebar from "../../components/admin/AdminSidebar";
-import TableHOC from "../../components/admin/TableHOC";
-import { useSelector } from "react-redux";
-import { UserReducerType } from "../../types/ReducerTypes";
-import { useDeleteUserMutation, useGetAllUserQuery } from "../../redux/api/UserApi";
-import toast from "react-hot-toast";
-import { CustomError } from "../../types/Types";
-import { server } from "../../redux/store";
 import Loader from "../../components/admin/Loader";
+import TableHOC from "../../components/admin/TableHOC";
+import { useDeleteUserMutation, useGetAllUserQuery } from "../../redux/api/UserApi";
+import { UserReducerType } from "../../types/ReducerTypes";
+import { CustomError } from "../../types/Types";
 
 interface DataType {
   avatar: ReactElement;
@@ -50,49 +49,7 @@ const columns: Column<DataType>[] = [
 const img = "https://randomuser.me/api/portraits/women/54.jpg";
 const img2 = "https://randomuser.me/api/portraits/women/50.jpg";
 
-const arr: Array<DataType> = [
-  {
-    avatar: (
-      <img
-        style={{
-          borderRadius: "50%",
-        }}
-        src={img}
-        alt="Shoes"
-      />
-    ),
-    name: "Emily Palmer",
-    email: "emily.palmer@example.com",
-    gender: "female",
-    role: "user",
-    action: (
-      <button>
-        <FaTrash />
-      </button>
-    ),
-  },
 
-  {
-    avatar: (
-      <img
-        style={{
-          borderRadius: "50%",
-        }}
-        src={img2}
-        alt="Shoes"
-      />
-    ),
-    name: "May Scoot",
-    email: "aunt.may@example.com",
-    gender: "female",
-    role: "user",
-    action: (
-      <button>
-        <FaTrash />
-      </button>
-    ),
-  },
-];
 
 const Customers = () => {
 

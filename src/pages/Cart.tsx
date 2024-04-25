@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { VscError } from "react-icons/vsc";
-import CartItem from "../components/CartItem";
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { CartReducerInitialState } from "../types/ReducerTypes";
-import { CartItemType } from "../types/Types";
+import { Link } from "react-router-dom";
+import CartItem from "../components/CartItem";
 import {
   addToCart,
   calculatePrice,
   discountApplied,
   removeFromCart,
 } from "../redux/reducer/CartReducer";
-import toast from "react-hot-toast";
-import axios from "axios";
 import { server } from "../redux/store";
+import { CartReducerInitialState } from "../types/ReducerTypes";
+import { CartItemType } from "../types/Types";
 
 const Cart = () => {
   const {
@@ -22,7 +22,6 @@ const Cart = () => {
     tax,
     total,
     shippingCharges,
-    shippingInfo,
     subtotal,
   } = useSelector(
     (state: { CartReducer: CartReducerInitialState }) => state.CartReducer

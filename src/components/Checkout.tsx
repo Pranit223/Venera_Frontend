@@ -5,17 +5,17 @@ import {
   useStripe,
 } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useNewOrderMutation } from "../redux/api/OrderApi";
+import { resetCart } from "../redux/reducer/CartReducer";
 import {
   CartReducerInitialState,
   UserReducerType,
 } from "../types/ReducerTypes";
-import { useNewOrderMutation } from "../redux/api/OrderApi";
 import { NewOrderReqType } from "../types/Types";
-import { resetCart } from "../redux/reducer/CartReducer";
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_KEY);
 

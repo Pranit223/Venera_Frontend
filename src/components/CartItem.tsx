@@ -10,7 +10,7 @@ type CartItemProps = {
 };
 
 const CartItem = ({ cartItem, incrementCartHandler,decrementCartHandler,removeCartHandler }: CartItemProps) => {
-  const { productId, photo, name, price, quantity, stock } = cartItem;
+  const { productId, photo, name, price, quantity } = cartItem;
   return (
     <div className="cart-item">
       <img src={photo} alt={photo} />

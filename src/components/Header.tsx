@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { signOut } from "firebase/auth";
+import { useState } from "react";
+import toast from "react-hot-toast";
 import { FaSearch, FaSignInAlt, FaSignOutAlt, FaUserAlt } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { UserType } from "../types/Types";
-import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
-import toast from "react-hot-toast";
+import { UserType } from "../types/Types";
 
 // const user = {
 //   _id: "",
