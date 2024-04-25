@@ -59,7 +59,7 @@ const Cart = () => {
           dispatch(discountApplied(res.data.discount));
            dispatch(calculatePrice());
         })
-        .catch((e) => {
+        .catch(() => {
           setIsValid(false);
           dispatch(discountApplied(0));
            dispatch(calculatePrice());

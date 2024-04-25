@@ -73,7 +73,7 @@ const CheckoutForm = () => {
     }
 
     if (paymentIntent?.status === "succeeded") {
-      const res = await newOrder(orderData);
+      await newOrder(orderData);
       dispatch(resetCart());
       console.log("palcing order");
       toast.success("Order Placed");

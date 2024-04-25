@@ -46,8 +46,8 @@ const columns: Column<DataType>[] = [
   },
 ];
 
-const img = "https://randomuser.me/api/portraits/women/54.jpg";
-const img2 = "https://randomuser.me/api/portraits/women/50.jpg";
+// const img = "https://randomuser.me/api/portraits/women/54.jpg";
+// const img2 = "https://randomuser.me/api/portraits/women/50.jpg";
 
 
 

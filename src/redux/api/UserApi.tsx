@@ -1,8 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-import { server } from "../store";
-import { AllUserMessageResponse, DeleteUserReq, MessageResponse, UserResponse, UserType } from "../../types/Types";
 import axios from "axios";
+import { AllUserMessageResponse, DeleteUserReq, MessageResponse, UserResponse, UserType } from "../../types/Types";
 
 export const userApi = createApi({
   reducerPath: "userApi",
